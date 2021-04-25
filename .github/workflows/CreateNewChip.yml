@@ -70,7 +70,7 @@ jobs:
       env: 
         MYSERVERPAT :  ${{ secrets.JP_PAT }} 
       working-directory: my-tools
-      run : .\CICDassist.exe --publish "$env:NEW_CHIP" "$env:CHIP_DESCR" "$env:MYSERVERPAT"
+      run : .\CICDassist.exe --publish "$env:NEW_CHIP" "$env:MYSERVERPAT"
       
      
    
