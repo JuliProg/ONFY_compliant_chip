@@ -7,8 +7,8 @@
     <ProjectGuid>{3E31FBFB-66A4-46D2-B211-1360CF8DE28F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>S34ML04G100BH100</RootNamespace>
-    <AssemblyName>S34ML04G100BH100</AssemblyName>
+    <RootNamespace>ONFY_compliant_chip</RootNamespace>
+    <AssemblyName>ONFY_compliant_chip</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NAND_Prog">
-      <HintPath>D:\a\S34ML04G100BH100\S34ML04G100BH100\references\NAND_Prog.exe</HintPath>
+      <HintPath>..\..\..\NAND_Prog\NAND_Prog\bin\Debug\NAND_Prog.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />

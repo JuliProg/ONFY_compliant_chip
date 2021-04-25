@@ -1,8 +1,9 @@
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S34ML04G100BH100", "S34ML04G100BHI0\S34ML04G100BH100.csproj", "{3E31FBFB-66A4-46D2-B211-1360CF8DE28F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ONFY_compliant_chip", "ONFY_compliant_chip\ONFY_compliant_chip.csproj", "{3E31FBFB-66A4-46D2-B211-1360CF8DE28F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBE73806-E0E0-4E55-8F6D-4BB14DCAF1C6}
 	EndGlobalSection
 EndGlobal

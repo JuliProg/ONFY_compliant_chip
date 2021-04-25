@@ -1,19 +1,27 @@
-![Create new chip](https://github.com/JuliProg/ONFY_compliant_chip/workflows/Create%20new%20chip/badge.svg?event=repository_dispatch)
-![ChipUpdate](https://github.com/JuliProg/ONFY_compliant_chip/workflows/ChipUpdate/badge.svg)
-# Join the development of the project ([list of tasks](https://github.com/users/JuliProg/projects/1))
+using NAND_Prog;
+using System.ComponentModel.Composition;
+
+namespace ONFY_compliant_chip
+{
+    /*
+     use the design :
+
+      # region
+         <some code> 
+      # endregion
+
+    for automatically include <some code> in the READMY.md file in the repository
+    */
+
+   
+    public class ChipAssembly
+    {
+        [Export("Chip")]
+        ChipPrototype myChip = new ChipPrototype();
 
 
-# ONFY_compliant_chip
-Implementation of the S34ML04G100BH100 chip for the JuliProg programmer
 
-Dependency injection, DI based on MEF framework is used to connect the chip to the programmer.
-
-<section class = "listing">
-
-# Chip parameters
-
-```c#
-
+        #region Chip parameters
 
         //--------------------Vendor Specific Pin configuration---------------------------
 
@@ -37,11 +45,11 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
             myChip.rowAdrCycles = 3;           // cycles for row addressing 
             myChip.vcc = Vcc.v3_3;             // supply voltage
             myChip.EccBits = 1;                // required Ecc bits for each 512 bytes
-```
-# Chip operations
+             
+        #endregion
 
-```c#
 
+            #region Chip operations
 
             //------- Add chip operations    https://github.com/JuliProg/Wiki#command-set----------------------------------------------------
 
@@ -50,21 +58,20 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
                    Operations("Read_00h_30h").
                    Operations("PageProgram_80h_10h");
 
-```
-# Initial Invalid Block (s)
+            #endregion
+                
 
-```c#
-
+            #region Initial Invalid Block (s)
             
             //------- Select the Initial Invalid Block (s) algorithm    https://github.com/JuliProg/Wiki/wiki/Initiate-Invalid-Block-----------
                 
             myChip.InitialInvalidBlock = "InitInvalidBlock_v1";
                 
-```
-# Chip registers (optional)
+            #endregion
+                
+                
 
-```c#
-
+            #region Chip registers (optional)
 
             //------- Add chip registers (optional)----------------------------------------------------
 
@@ -81,32 +88,20 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
                 "Id Register").
                 Size(5).
                 Operations("ReadId_90h");
-            //Interpretation(ID_interpreting);
+            
 
             myChip.registers.Add(
               "Parameter Page (ONFI parameter)").
               Size(768).
               Operations("ReadParameterPage_ECh");
 
-```
-
-</section>
+            #endregion
 
 
+        }
 
+     
+       
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-footer
+}
