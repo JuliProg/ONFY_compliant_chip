@@ -4,7 +4,7 @@
 
 
 # ONFY_compliant_chip
-Implementation of the S34ML04G100BH100 chip for the JuliProg programmer
+Implementation of the ONFY_compliant_chip chip for the JuliProg programmer
 
 Dependency injection, DI based on MEF framework is used to connect the chip to the programmer.
 
