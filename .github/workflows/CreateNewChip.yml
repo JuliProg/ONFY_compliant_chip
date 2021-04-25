@@ -44,7 +44,7 @@ jobs:
     
     - name: Refactoring new repo
       working-directory: my-tools
-      run : .\CICDassist.exe --create "$env:NEW_CHIP" "$env:TEMPLATE_CHIP"  
+      run : .\CICDassist.exe --create "$env:NEW_CHIP" "$env:TEMPLATE_CHIP" "$env:CHIP_DESCR" 
       
       
     - name: Push repo-changes to GitHub
@@ -70,7 +70,7 @@ jobs:
       env: 
         MYSERVERPAT :  ${{ secrets.JP_PAT }} 
       working-directory: my-tools
-      run : .\CICDassist.exe --publish "$env:NEW_CHIP" "$env:MYSERVERPAT"
+      run : .\CICDassist.exe --publish "$env:NEW_CHIP" "$env:CHIP_DESCR" "$env:MYSERVERPAT"
       
      
    
