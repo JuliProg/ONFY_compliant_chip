@@ -12,12 +12,16 @@ namespace ONFY_compliant_chip
 
     for automatically include <some code> in the READMY.md file in the repository
     */
+    public class ChipPrototype_v1 : ChipPrototype
+    {
+        public int EccBits ;   
+    }
 
-   
+
     public class ChipAssembly
     {
         [Export("Chip")]
-        ChipPrototype myChip = new ChipPrototype();
+        ChipPrototype myChip = new ChipPrototype_v1();
 
 
 
@@ -33,18 +37,18 @@ namespace ONFY_compliant_chip
         {
             myChip.devManuf = "Template";
             myChip.name = "ONFY_compliant_chip";
-            myChip.chipID = "EMPTY";           // device ID 
+            myChip.chipID = "EMPTY";                                 // device ID 
 
-            myChip.width = Organization.x8;    // chip width (x8 or x16)
-            myChip.bytesPP = 2048;             // page size in bytes
-            myChip.spareBytesPP = 64;          // size Spare Area in bytes
-            myChip.pagesPB = 64;               // the number of pages per block 
-            myChip.bloksPLUN = 4096;           // number of blocks in CE 
-            myChip.LUNs = 1;                   // the amount of CE in the chip
-            myChip.colAdrCycles = 2;           // cycles for column addressing
-            myChip.rowAdrCycles = 3;           // cycles for row addressing 
-            myChip.vcc = Vcc.v3_3;             // supply voltage
-            myChip.EccBits = 1;                // required Ecc bits for each 512 bytes
+            myChip.width = Organization.x8;                          // chip width (x8 or x16)
+            myChip.bytesPP = 2048;                                   // page size in bytes
+            myChip.spareBytesPP = 64;                                // size Spare Area in bytes
+            myChip.pagesPB = 64;                                     // the number of pages per block 
+            myChip.bloksPLUN = 4096;                                 // number of blocks in CE 
+            myChip.LUNs = 1;                                         // the amount of CE in the chip
+            myChip.colAdrCycles = 2;                                 // cycles for column addressing
+            myChip.rowAdrCycles = 3;                                 // cycles for row addressing 
+            myChip.vcc = Vcc.v3_3;                                   // supply voltage
+            (myChip as ChipPrototype_v1).EccBits = 1;                // required Ecc bits for each 512 bytes
              
         #endregion
 
@@ -85,7 +89,7 @@ namespace ONFY_compliant_chip
 
 
             myChip.registers.Add(                  // https://github.com/JuliProg/Wiki/wiki/ID-Register
-                "Id Register").
+                "Id Register").     
                 Size(5).
                 Operations("ReadId_90h");
             
