@@ -36,7 +36,7 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
             myChip.colAdrCycles = 2;           // cycles for column addressing
             myChip.rowAdrCycles = 3;           // cycles for row addressing 
             myChip.vcc = Vcc.v3_3;             // supply voltage
-            myChip.EccBits = 1;                // required Ecc bits for each 512 bytes
+            (myChip as ChipPrototype_v1).EccBits = 1;                // required Ecc bits for each 512 bytes
 ```
 # Chip operations
 
