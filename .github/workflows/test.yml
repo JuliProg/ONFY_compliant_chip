@@ -1,6 +1,6 @@
 name: CICD test
 env:
-      NEW_CHIP: ONFY_compliant_chip
+      NEW_CHIP: BLABLA
       TEMPLATE_CHIP: ONFY_compliant_chip
       CHIP_DESCR: '{"devManuf":"MICRON","bytesPP":4096,"spareBytesPP":224}'
       
