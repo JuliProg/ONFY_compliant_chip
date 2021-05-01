@@ -23,6 +23,13 @@ jobs:
        path: chip
        token: ${{ secrets.GITHUB_TOKEN }} 
        
+    - name: Get chip dependency
+      uses: actions/checkout@v2
+      with: 
+       token: ${{ secrets.GITHUB_TOKEN }}
+       repository: JuliProg/Software
+       path: references       
+       
     
     - name: Get CICDassist
       uses: actions/checkout@v2
