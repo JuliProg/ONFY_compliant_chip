@@ -2,7 +2,7 @@ name: CICD test
 env:
       NEW_CHIP: S34ML04G100BH100
       TEMPLATE_CHIP: ONFY_compliant_chip
-      CHIP_DESCR: {""devManuf"":""MICRON"",""chipName"":""MT29F8G08ABABAWP"",""chipID"":""2C38002685000000"",""width"":""x8"",""bytesPP"":4096,""spareBytesPP"":224}
+      #CHIP_DESCR: "{""devManuf"":""MICRON"",""chipName"":""MT29F8G08ABABAWP"",""chipID"":""2C38002685000000"",""width"":""x8"",""bytesPP"":4096,""spareBytesPP"":224}"
       
       
 on:
