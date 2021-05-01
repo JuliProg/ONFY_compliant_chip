@@ -1,7 +1,7 @@
 name: CICD test
 env:
-      NEW_CHIP: "BLABLA"
-      TEMPLATE_CHIP: "ONFY_compliant_chip"
+      NEW_CHIP: BLABLA
+      TEMPLATE_CHIP: ONFY_compliant_chip
       CHIP_DESCR: '{"devManuf":"MICRON","bytesPP":4096,"spareBytesPP":224}'
 
 
@@ -39,6 +39,6 @@ jobs:
     - name: Refactoring new repo
       shell: bash 
       working-directory: my-tools         
-      run : ./CICDassist.exe --test "$env:NEW_CHIP" "$env:TEMPLATE_CHIP" "$env:CHIP_DESCR" 
+      run : ./CICDassist.exe --test $NEW_CHIP $TEMPLATE_CHIP $CHIP_DESCR 
       
             
