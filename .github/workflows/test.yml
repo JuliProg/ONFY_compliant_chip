@@ -12,7 +12,7 @@ on:
 jobs:
  
    
-  Test CICD:
+  Test_CICD:
     runs-on: windows-latest 
    
     steps:
