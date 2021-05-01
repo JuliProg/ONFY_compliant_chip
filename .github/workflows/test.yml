@@ -26,10 +26,7 @@ jobs:
        token: ${{ secrets.GITHUB_TOKEN }} 
   
   
-  
-    - name: ls chip directory
-      run: ls
-      
+
     
     - name: Get CICDassist
       uses: actions/checkout@v2
@@ -40,6 +37,6 @@ jobs:
        
     - name: Refactoring new repo
       working-directory: my-tools
-      shell: bash      
-      run : .\CICDassist --test "$env:NEW_CHIP" "$env:TEMPLATE_CHIP" "$env:CHIP_DESCR" 
+      shell: pwsh      
+      run : '.\CICDassist --test "$env:NEW_CHIP" "$env:TEMPLATE_CHIP" "$env:CHIP_DESCR" '
             
