@@ -1,6 +1,6 @@
 name: CICD test
 env:
-      NEW_CHIP: S34ML04G100BH100
+      NEW_CHIP: ONFY_compliant_chip
       TEMPLATE_CHIP: ONFY
       CHIP_DESCR: '{"devManuf":"MICRON","bytesPP":4096,"spareBytesPP":224}'
       
