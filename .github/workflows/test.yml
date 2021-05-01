@@ -39,7 +39,7 @@ jobs:
        path: my-tools    
        
     - name: Refactoring new repo
-      shell: bash
+      #shell: bash
       working-directory: my-tools
       run : |
             ls
