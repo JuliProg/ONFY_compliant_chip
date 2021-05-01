@@ -43,8 +43,11 @@ jobs:
        
     
     - name: Refactoring new repo
-      working-directory: my-tools
-      run : .\CICDassist.exe --create "$env:NEW_CHIP" "$env:TEMPLATE_CHIP" "$env:CHIP_DESCR" 
+      #working-directory: my-tools
+      #run : .\CICDassist.exe --create "$env:NEW_CHIP" "$env:TEMPLATE_CHIP" "$env:CHIP_DESCR" 
+      shell: bash 
+      working-directory: my-tools         
+      run : ./CICDassist.exe --create $NEW_CHIP $TEMPLATE_CHIP $CHIP_DESCR 
       
       
     - name: Push repo-changes to GitHub
