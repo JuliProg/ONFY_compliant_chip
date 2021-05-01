@@ -39,5 +39,6 @@ jobs:
        path: my-tools    
        
     - name: Refactoring new repo
+      shell: bash
       working-directory: my-tools
       run : .\CICDassist.exe --test "$env:NEW_CHIP" "$env:TEMPLATE_CHIP" "$env:CHIP_DESCR"        
