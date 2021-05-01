@@ -39,9 +39,9 @@ jobs:
        path: my-tools    
        
     - name: Refactoring new repo
-      #shell: bash
+      shell: bash
       working-directory: my-tools
       run : |
-            ls
+            cd 'D:\a\ONFY_compliant_chip\ONFY_compliant_chip\my-tools'
             .\CICDassist.exe --test "$env:NEW_CHIP" "$env:TEMPLATE_CHIP" "$env:CHIP_DESCR"        
             
