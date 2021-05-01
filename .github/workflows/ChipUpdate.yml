@@ -3,10 +3,11 @@ env:
       NEW_CHIP: ${{ github.event.repository.name }}
    
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+   create:
+#  push:
+#    branches: [ master ]
+#  pull_request:
+#    branches: [ master ]
 
 jobs:
   
