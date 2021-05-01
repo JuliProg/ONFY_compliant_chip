@@ -24,8 +24,12 @@ jobs:
       with:
        path: chip
        token: ${{ secrets.GITHUB_TOKEN }} 
-       
-   
+  
+  
+  
+    - name: ls chip directory
+      run: ls
+      
     
     - name: Get CICDassist
       uses: actions/checkout@v2
