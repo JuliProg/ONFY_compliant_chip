@@ -3,7 +3,8 @@ env:
       NEW_CHIP: BLABLA
       TEMPLATE_CHIP: ONFY_compliant_chip
       CHIP_DESCR: '{"devManuf":"MICRON","bytesPP":4096,"spareBytesPP":224}'
-      
+
+
       
 on:
   push:
